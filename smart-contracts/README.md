@@ -1,5 +1,9 @@
-# Getting Started with Create React App
+# Getting Started with a Simple Dockerised React App in Nginx
 
-this demo is hosted at https://endearing-starburst-0a5684.netlify.app/
+this demo is hosted at https://hub.docker.com/repository/docker/piggyinu/babykittens-frontend
 
-Feel free to request for your Free NUSMoney Token
+```
+docker run -d -it -p 80:80 --name babykittens-frontend piggyinu/babykittens-frontend
+```
+
+Feel free pull my docker images with the above command
