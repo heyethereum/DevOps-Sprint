@@ -221,7 +221,7 @@ geth --datadir miner/node1 init kittytestnet.json
 
 You should see the following:
 
-![Node 1](/images/screen-layout-2.png)
+![Node 1](/images/screen-layout-2.PNG)
 
 We have told the `geth` client: "We'd like you to initialize the Ethereum protocol using this custom genesis block we've created." **This is very important for the tutorial.**
 
