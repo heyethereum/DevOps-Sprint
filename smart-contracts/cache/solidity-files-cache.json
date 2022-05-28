@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\ACER\\Desktop\\Project\\private-blockchain\\smart-contracts\\contracts\\NUSBank.sol": {
-      "lastModificationDate": 1653618257053,
-      "contentHash": "4fe29f00043ef586d757c639986b2eb9",
+      "lastModificationDate": 1653736691858,
+      "contentHash": "a1a89da1fd90e61c44cf92d258c3a00d",
       "sourceName": "contracts/NUSBank.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -221,8 +221,8 @@
       ]
     },
     "C:\\Users\\ACER\\Desktop\\Project\\private-blockchain\\smart-contracts\\contracts\\SuperToken.sol": {
-      "lastModificationDate": 1650952350800,
-      "contentHash": "6325b8b5827eff4685531334dd68f765",
+      "lastModificationDate": 1653736671687,
+      "contentHash": "e9a576584b089e394226210c1dc16427",
       "sourceName": "contracts/SuperToken.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -892,8 +892,8 @@
       ]
     },
     "C:\\Users\\ACER\\Desktop\\Project\\private-blockchain\\smart-contracts\\contracts\\SproutIndexToken.sol": {
-      "lastModificationDate": 1652070314250,
-      "contentHash": "147974bab44096055fad1b42d65a3957",
+      "lastModificationDate": 1653737046723,
+      "contentHash": "c16c2511a9f758868682a826754268de",
       "sourceName": "contracts/SproutIndexToken.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -935,8 +935,8 @@
       ]
     },
     "C:\\Users\\ACER\\Desktop\\Project\\private-blockchain\\smart-contracts\\contracts\\NUSMoneyToken.sol": {
-      "lastModificationDate": 1653619104086,
-      "contentHash": "65f82a5203bc5f038cd79d3edbb59591",
+      "lastModificationDate": 1653737051435,
+      "contentHash": "a7ac686785e5a8cf83d581755564e2f7",
       "sourceName": "contracts/NUSMoneyToken.sol",
       "solcConfig": {
         "version": "0.8.4",

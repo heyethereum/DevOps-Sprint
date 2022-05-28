@@ -6,9 +6,10 @@ import { formatEther } from "ethers/lib/utils";
 import { useWeb3React } from "@web3-react/core";
 import Button from "@mui/material/Button";
 
-export const TokenAddress = "0xCb76B1948F65132F2e52eD681FD26935c9E206F2";
-export const BankAddress = "0x2139dbd3d1ECFEC96F11a9b3951900a63062d283";
+export const TokenAddress = "0xa3FEE928EFc09c88ff31B01BD2c6f8b862A04aef";
+export const BankAddress = "0x3db5c93C420Cc868d9DAd12067A31b2c69285aD5";
 
+const DEFAULT_NET = 987;
 const TokenAmount = "100";
 
 const DisplayTokenBalance = () => {
@@ -79,10 +80,10 @@ const DisplayTokenBalance = () => {
 
   const switchNetwork = async () => {
     try {
-      console.log("chain id", `0x${Number(43113).toString(16)}`);
+      console.log("chain id", `0x${Number(DEFAULT_NET).toString(16)}`);
       await web3reactContext.library.provider.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: `0x${Number(43113).toString(16)}` }],
+        params: [{ chainId: `0x${Number(DEFAULT_NET).toString(16)}` }],
       });
     } catch (switchError) {
       // 4902 error code indicates the chain is missing on the wallet
@@ -92,11 +93,11 @@ const DisplayTokenBalance = () => {
             method: "wallet_addEthereumChain",
             params: [
               {
-                chainId: `0x${Number(43113).toString(16)}`,
-                rpcUrls: ["https://ropsten.infura.io/v3/"],
-                chainName: "Avalanche Testnet",
-                nativeCurrency: { name: "AVAX", decimals: 18, symbol: "AVAX" },
-                blockExplorerUrls: ["https://testnet.snowtrace.io"],
+                chainId: `0x${Number(DEFAULT_NET).toString(16)}`,
+                rpcUrls: ["http://127.0.0.1:8545/"],
+                chainName: "Kittens Testnet",
+                nativeCurrency: { name: "ETH", decimals: 18, symbol: "ETH" },
+                blockExplorerUrls: ["https://"],
               },
             ],
           });
@@ -109,21 +110,21 @@ const DisplayTokenBalance = () => {
 
   return (
     <div>
-      {web3reactContext.active && web3reactContext.chainId !== 43113 ? (
+      {web3reactContext.active && web3reactContext.chainId !== DEFAULT_NET ? (
         <Button onClick={switchNetwork} variant="contained" color="primary">
-          Switch to Avalanche Fuji Testnet
+          Switch to Kittens Testnet
         </Button>
       ) : null}
       {web3reactContext.active &&
       balance > 0 &&
-      web3reactContext.chainId === 43113 ? (
+      web3reactContext.chainId === DEFAULT_NET ? (
         <h3>
           Balance: {balance} {tokenSymbol}
         </h3>
       ) : (
         <></>
       )}
-      {web3reactContext.active && web3reactContext.chainId === 43113 ? (
+      {web3reactContext.active && web3reactContext.chainId === DEFAULT_NET ? (
         <div>
           <Button
             onClick={requestTokens}

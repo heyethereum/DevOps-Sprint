@@ -9,8 +9,6 @@ import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20FlashMint.sol";
 
-// ropsten token address: 0xEE8Ae90db1f7d2D2aeF19E7FFe62803bD2Da7Aa1
-
 contract SuperToken is
     ERC20,
     ERC20Burnable,

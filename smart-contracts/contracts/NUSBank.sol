@@ -4,11 +4,7 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
-// NUS Central Bank Ropsten address: 0x8f8013BC181Dc7B02fF6278DaeB5B5fd433a3C08
-// 2nd deploy: 0x4238bE617FB3055B4c40D9EF878d19c160968441
-// 3rd deploy: 0xB61271d05D13A29e6379E18D533f6c1B110d46Db
-
-// Avax testnet address: 0x2139dbd3d1ECFEC96F11a9b3951900a63062d283
+// kitten testnet address: 0x3db5c93C420Cc868d9DAd12067A31b2c69285aD5
 
 contract NUSBank {
     address owner;
