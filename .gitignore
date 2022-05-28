@@ -1,4 +1,6 @@
 .env
 node_modules
 
-terraform-private-ethereum/.terraform/*
+miner/node1
+miner/node2
+miner/node3

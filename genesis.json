@@ -1,16 +1,26 @@
 {
   "config": {
-    "chainId": 1214,
-    "homesteadBlock": 0,
-    "eip150Block": 0,
-    "eip155Block": 0,
-    "eip158Block": 0,
-    "byzantiumBlock": 0,
-    "constantinopleBlock": 0,
-    "petersburgBlock": 0,
-    "ethash": {}
+    "chainId": 987,
+    "homesteadBlock": 1,
+    "eip150Block": 2,
+    "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "eip155Block": 3,
+    "eip158Block": 3,
+    "byzantiumBlock": 4,
+    "clique": {
+      "period": 5,
+      "epoch": 30000
+    }
   },
-  "difficulty": "1",
-  "gasLimit": "12000000",
-  "alloc": {}
+  "nonce": "0x0",
+  "timestamp": "0x5a8efd25",
+  "extraData": "0x00000000000000000000000000000000000000000000000000000000000000003590aca93338b0721966a8d0c96ebf2c4c87c5448cc5a1a0802db41db826c2fcb72423744338dcb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0xf42400",
+  "difficulty": "0x1",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "alloc": {},
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
