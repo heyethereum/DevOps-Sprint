@@ -82,7 +82,7 @@ Configuring Clique via Puppeth
 
 ### Network Name
 
-![Network-Name](/images/puppeth-1.png)
+![Network-Name](/images/puppeth-1.PNG)
 
 For local caching purposes, `puppeth` asks you for a network name. **If it detects this network has been used before, it will pull the network information it has previously stored.**
 
@@ -92,7 +92,7 @@ Be sure not to use any spaces, hyphens or capital letters!
 
 ### Configure New Genesis Block
 
-![New-Genesis](/images/puppeth-2.png)
+![New-Genesis](/images/puppeth-2.PNG)
 
 We're getting a new genesis block started, so we're going to type `2` and hit enter.
 
@@ -100,7 +100,7 @@ We're getting a new genesis block started, so we're going to type `2` and hit en
 
 ### Clique Consensus Mechanism
 
-![Consensus](/images/puppeth-3.png)
+![Consensus](/images/puppeth-3.PNG)
 
 Ethereum Mainnet currently runs on **[Proof-of-Work consensus.](https://cointelegraph.com/explained/proof-of-work-explained)** That's an awesome consensus mechanism for large networks sprawling the globle in a trustless manner, but for our small, down-home network, we're going to choose **Clique, [a Proof-of-Authority](https://en.wikipedia.org/wiki/Proof-of-authority) consensus mechanism.**
 
@@ -108,7 +108,7 @@ Ethereum Mainnet currently runs on **[Proof-of-Work consensus.](https://cointele
 
 ### Block Time
 
-![Block Time](/images/puppeth-4.png)
+![Block Time](/images/puppeth-4.PNG)
 
 In blockchain networks, the block time is considered the **"network heartbeat"** — how often a confirmed block containing the latest confirmed transactions is broadcast out to the network.
 
@@ -122,7 +122,7 @@ Proof-of-Authority networks can decrease their block time and therefore **increa
 
 ### Sealer Nodes
 
-![Sealer Nodes](/images/puppeth-5.png)
+![Sealer Nodes](/images/puppeth-5.PNG)
 
 As discussed above, Proof-of-Authority networks allow only certain nodes, called **"sealers"** to confirm blocks in the network. Furthermore, the Clique consensus protocol **only allows each sealer to confirm a certain number of consecutive blocks.** For the sake of demonstrating Proof-of-Authority networks, we'll just put the one below for simplicity's sake:
 
@@ -134,7 +134,7 @@ _Note: The `0x` prefix hexadecimal-encoded values to help program parsers. Read 
 
 ### Pre-Funded Accounts
 
-![Pre-Funded Nodes](/images/puppeth-6.png)
+![Pre-Funded Nodes](/images/puppeth-6.PNG)
 
 **Cryptocurrency units can be created one of two ways.** First, **someone can mine new blocks for a network** and be rewarded in that cryptocurrency. Second, **the creator of a network can designate certain accounts to have a certain balance** in the genesis block (also known as a "pre-mine").
 
@@ -144,13 +144,13 @@ Here, we are designating the same account above as "pre-funded" in the genesis b
 
 ### Pre-Funded Precompiles
 
-![Pre-Funded Precompiles](/images/puppeth-6b.png)
+![Pre-Funded Precompiles](/images/puppeth-6b.PNG)
 
 This is an interesting technical point beyond the scope of this tutorial. [See more here if you're interested in why we need to fund precompiles.](https://ethereum.stackexchange.com/questions/68056/puppeth-precompile-addresses) And answer `yes`.
 
 ### Network ID
 
-![Network ID](/images/puppeth-7.png)
+![Network ID](/images/puppeth-7.PNG)
 
 **Nodes on a network need to determine which nodes they can connect with.** With a custom-generated genesis block, we provide a `Network ID` so nodes can easily identify each other.
 
@@ -162,15 +162,15 @@ After we enter `Network ID`, `puppeth` takes all the information we have provide
 
 ### Exporting Genesis Block
 
-![Exporting Genesis Block](/images/puppeth-8a.png)
+![Exporting Genesis Block](/images/puppeth-8a.PNG)
 
 Last, we need to export the genesis block `puppeth` has created for us. Select `2` from the current menu (see above)
 
-![Exporting Genesis Block 2](/images/puppeth-8b.png)
+![Exporting Genesis Block 2](/images/puppeth-8b.PNG)
 
 Select `2` again (see above)
 
-![Exporting Genesis Block 3](/images/puppeth-8c.png)
+![Exporting Genesis Block 3](/images/puppeth-8c.PNG)
 
 Last, simply press enter to have the genesis block saved to the default setting of the current directory. Don't mind the errors you see there -- Aleth and Parity are two Ethereum clients that don't have support for Clique, the PoA consensus mechanism we picked.
 
@@ -197,7 +197,7 @@ Note: The bootnode acts more as a network router or hub. It is a central point t
 
 **_I would recommend enlarging the window and placing it in the upper corner of the window, as shown below:_**
 
-![Bootnode](/images/screen-layout-1.png)
+![Bootnode](/images/screen-layout-1.PNG)
 
 [Top](#table-of-contents)
 
