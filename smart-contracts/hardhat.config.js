@@ -20,6 +20,12 @@ module.exports = {
     },
   },
   networks: {
+    kittens: {
+      url: "http://127.0.0.1:8545",
+      gasPrice: 225000000000,
+      chainId: 987,
+      accounts: [`0x${SECRET}`],
+    },
     ropsten: {
       url: `${ALCHEMY_API}`,
       accounts: [`0x${SECRET}`],
