@@ -82,7 +82,7 @@ Configuring Clique via Puppeth
 
 ### Network Name
 
-![Network-Name](/images/puppeth-1.PNG)
+![Network-Name](./images/puppeth-1.PNG)
 
 For local caching purposes, `puppeth` asks you for a network name. **If it detects this network has been used before, it will pull the network information it has previously stored.**
 
