@@ -7,3 +7,9 @@ docker run -d -it -p 80:80 --name babykittens-frontend piggyinu/babykittens-fron
 ```
 
 Feel free pull my docker images with the above command
+
+Frontend can be accessed at localhost port 80:
+
+```
+http://localhost
+```
