@@ -42,6 +42,11 @@ jobs:
         run:
           npm --prefix ./smart-contracts run test
       
+      # Remove env file
+      - name: Remove Env File
+        run: |
+          rm ./smart-contracts/.env
+
       # Logs into Dockerhub
       - name: docker hub login
         env: 
