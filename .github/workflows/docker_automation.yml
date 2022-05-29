@@ -28,6 +28,7 @@ jobs:
       # Test Smart Contracts
       - name: Hardhat Test Smart Contracts
         run:
+          npm install
           npm --prefix ./smart-contracts run test
       
       # Logs into Dockerhub
