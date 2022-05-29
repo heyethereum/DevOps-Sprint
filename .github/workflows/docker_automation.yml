@@ -30,6 +30,13 @@ jobs:
         run:
           npm --prefix ./smart-contracts install
 
+      # Create env file
+      - name: Create Env File
+        run: |
+          touch .env
+          echo SECRET1=${{ secrets.SECRET1 }} >> .env
+          cat .env
+
       # Test Smart Contracts
       - name: Hardhat Test Smart Contracts
         run:
@@ -47,7 +54,12 @@ jobs:
       - name: Docker build
         run: |
           docker build ./smart-contracts -t piggyinu/babykittens-frontend
-          
+
+    deployment:
+      runs-on: ubuntu-latest
+      needs: build
+
+      steps:    
       # Push to Docker hub
       - name: Docker push
         run:
