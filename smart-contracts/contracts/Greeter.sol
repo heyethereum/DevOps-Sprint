@@ -7,7 +7,7 @@ contract Greeter {
     string private greeting;
 
     constructor(string memory _greeting) {
-        console.log("Deploying a Greeter with greetings: ", _greeting);
+        console.log("Deploying a Greeter with greetings:", _greeting);
         greeting = _greeting;
     }
 
@@ -16,11 +16,7 @@ contract Greeter {
     }
 
     function setGreeting(string memory _greeting) public {
-        console.log(
-            "Changing greetingn from '%s' to '%s'",
-            _greeting,
-            greeting
-        );
+        console.log("Changing greeting from '%s' to '%s'", _greeting, greeting);
         greeting = _greeting;
     }
 }
