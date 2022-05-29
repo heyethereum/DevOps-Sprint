@@ -37,3 +37,8 @@ jobs:
       - name: Docker build
         run: |
           docker build ./smart-contracts -t piggyinu/babykittens-frontend
+          
+      # Push to Docker hub
+      - name: Docker push
+        run:
+          docker push piggyinu/babykittens-frontend
