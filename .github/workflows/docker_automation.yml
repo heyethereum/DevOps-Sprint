@@ -25,6 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
+      # Test Smart Contracts
+      - name: Hardhat Test Smart Contracts
+        run:
+          npm test
+      
       # Logs into Dockerhub
       - name: docker hub login
         env: 
