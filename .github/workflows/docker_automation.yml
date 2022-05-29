@@ -28,7 +28,7 @@ jobs:
       # npm install 
       - name: npm install
         run:
-          npm install
+          npm --prefix ./smart-contracts install
 
       # Test Smart Contracts
       - name: Hardhat Test Smart Contracts
