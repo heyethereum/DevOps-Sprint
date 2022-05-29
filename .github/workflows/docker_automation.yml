@@ -55,12 +55,12 @@ jobs:
         run: |
           docker build ./smart-contracts -t piggyinu/babykittens-frontend
 
-    deployment:
-      runs-on: ubuntu-latest
-      needs: build
+  deployment:
+    runs-on: ubuntu-latest
+    needs: build
 
-      steps:    
-      # Push to Docker hub
-      - name: Docker push
-        run:
-          docker push piggyinu/babykittens-frontend
+    steps:    
+    # Push to Docker hub
+    - name: Docker push
+      run:
+        docker push piggyinu/babykittens-frontend
