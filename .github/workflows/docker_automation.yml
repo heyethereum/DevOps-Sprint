@@ -33,9 +33,9 @@ jobs:
       # Create env file
       - name: Create Env File
         run: |
-          touch .env
-          echo SECRET1=${{ secrets.SECRET1 }} >> .env
-          cat .env
+          touch ./smart-contracts/.env
+          echo SECRET1=${{ secrets.SECRET1 }} >> ./smart-contracts/.env
+          cat ./smart-contracts/.env
 
       # Test Smart Contracts
       - name: Hardhat Test Smart Contracts
