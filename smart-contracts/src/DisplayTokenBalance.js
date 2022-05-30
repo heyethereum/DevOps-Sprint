@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 
 // docker token address: 0xCb76B1948F65132F2e52eD681FD26935c9E206F2
 // local token address: 0xa3FEE928EFc09c88ff31B01BD2c6f8b862A04aef
-// docker bank address: 0x8A366547C188412c93F2c5bdc776c8f0745545a7
+// docker bank address: 0x32c2c15399aAD0deE331E2DD283a2cF4EA6CEAE0
 // local bank address: 0x32c2c15399aAD0deE331E2DD283a2cF4EA6CEAE0
 
 // max approval: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
