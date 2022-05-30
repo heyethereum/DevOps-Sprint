@@ -23,7 +23,7 @@ services:
       context: ./private-blockchain/miner/node1
     container_name: geth-miner-1
     volumes:
-      - eth-data-1:/root/miner/node1
+      - eth-data-1:/root/private-blockchain/miner/node1
     ports:
       - "8545:8545"
     networks:
@@ -43,12 +43,27 @@ services:
       context: ./private-blockchain/miner/node2
     container_name: geth-miner-2
     volumes:
-      - eth-data-2:/root/miner/node2
+      - eth-data-2:/root/private-blockchain/miner/node2
     ports:
       - "8546:8546"
     networks:
       chainnet:
         ipv4_address: 172.25.0.103 # The monitor needs to know this address
+
+  babykitties-frontend:
+    hostname: babykitties-frontend
+    depends_on:
+      - geth-bootnode
+    build:
+      context: ./smart-contracts
+    container_name: babykitties-frontend
+    volumes:
+      - eth-data-3:/root/smart-contracts
+    ports:
+      - "80:80"
+    networks:
+      chainnet:
+        ipv4_address: 172.25.0.104 # The monitor needs to know this address
     
 networks:
   chainnet:
@@ -60,3 +75,5 @@ networks:
 volumes:
   eth-data-1:
   eth-data-2:
+  eth-data-3:
+

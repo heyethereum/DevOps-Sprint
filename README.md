@@ -66,7 +66,7 @@ docker run -d -p 80:80 piggyinu/babykittens-frontend
 
 Lastly, you can kill all containers by typing:
 ```
-docker kill $(docker ps -q)
+docker-compose down
 ```
 
 
