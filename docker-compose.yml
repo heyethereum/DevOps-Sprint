@@ -1,0 +1,79 @@
+version: "3"
+services:
+  geth-bootnode:
+    hostname: geth-bootnode
+    build:
+      context: ./private-blockchain/bootnode
+    ports:
+      - 30310:30310/udp
+    networks:
+      chainnet:
+        ipv4_address: 172.25.0.101 # The miners need to know the IP address later on
+    
+    
+  geth-dev-miner-1:
+    hostname: geth-dev-miner-1
+    depends_on:
+      - geth-bootnode
+    environment:
+      - address=8fc813d81e623f9c80fe218cd770c024e57d7ae7 #derived from the private key which is passed in the args
+      - bootnodeId=83bd6dafabd4a27b1b1c05dbcf97047818f41a85bd937dbe20c4929635e87828b16be4c8c1d02cf6e2aa4761e01c32117f77946189cc24f93fd5ef49edc34f88 #derived from the nodekeyhex of the bootnode
+      - bootnodeIp=172.25.0.101
+    build:
+      context: ./private-blockchain/miner/node1
+    container_name: geth-miner-1
+    volumes:
+      - eth-data-1:/root/miner/node1
+    ports:
+      - "8545:8545"
+    networks:
+      chainnet:
+        ipv4_address: 172.25.0.102 # The monitor needs to know this address
+    
+
+  geth-dev-miner-2:
+    hostname: geth-dev-miner-2
+    depends_on:
+      - geth-bootnode
+    environment:
+      - address=f18e24559fed97f4f6fc235ae99d1981cc239d4c #derived from the private key which is passed in the args
+      - bootnodeId=83bd6dafabd4a27b1b1c05dbcf97047818f41a85bd937dbe20c4929635e87828b16be4c8c1d02cf6e2aa4761e01c32117f77946189cc24f93fd5ef49edc34f88 #derived from the nodekeyhex of the bootnode
+      - bootnodeIp=172.25.0.101
+    build:
+      context: ./private-blockchain/miner/node2
+    container_name: geth-miner-2
+    volumes:
+      - eth-data-2:/root/miner/node2
+    ports:
+      - "8546:8546"
+    networks:
+      chainnet:
+        ipv4_address: 172.25.0.103 # The monitor needs to know this address
+
+  babykitties-frontend:
+    hostname: babykitties-frontend
+    depends_on:
+      - geth-dev-miner-2
+    build:
+      context: ./smart-contracts
+    container_name: babykitties-frontend
+    volumes:
+      - eth-data-3:/root/
+    ports:
+      - "80:80"
+    networks:
+      chainnet:
+        ipv4_address: 172.25.0.104 # The monitor needs to know this address
+    
+networks:
+  chainnet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.25.0.0/24
+
+volumes:
+  eth-data-1:
+  eth-data-2:
+  eth-data-3:
+
