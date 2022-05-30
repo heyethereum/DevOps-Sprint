@@ -26,7 +26,7 @@ In this Demo, we are setting up a private network with 3 nodes as follows:
 ## Import custom network(Kittens Testnet into Metamask)
 You should see the following:
 
-![import Kittens Testnet RPC](./images/custom-network.PNG)
+![import Kittens Testnet RPC](./private-blockchain/images/custom-network.PNG)
 
 ## Accessing the Geth Console and fund your metamask wallet
 
