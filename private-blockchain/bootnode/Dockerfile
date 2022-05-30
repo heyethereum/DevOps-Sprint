@@ -16,9 +16,19 @@ RUN apt-get update \
 
 ADD ./boot.key ./boot.key
 
-CMD exec bootnode -nodekey boot.key -verbosity 9 -addr :30310
+EXPOSE 8545
+EXPOSE 8546
+EXPOSE 8547
+EXPOSE 30310
+EXPOSE 30311
+EXPOSE 30312
+EXPOSE 30313
 
 EXPOSE 30310/udp
 EXPOSE 30311/udp
 EXPOSE 30312/udp
 EXPOSE 30313/udp
+
+CMD exec bootnode -nodekey boot.key -verbosity 9 -addr :30310
+
+
