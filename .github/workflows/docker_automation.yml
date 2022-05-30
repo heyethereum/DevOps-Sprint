@@ -29,7 +29,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -37,30 +36,30 @@ jobs:
           cache: 'npm'
         - run: npm ci
 
-      # Create env file
-      - name: Create Env File
-        run: |
-          touch ./smart-contracts/.env
-          echo SECRET1=${{ secrets.SECRET1 }} >> ./smart-contracts/.env
-          cat ./smart-contracts/.env
+        # Create env file
+        - name: Create Env File
+          run: |
+            touch ./smart-contracts/.env
+            echo SECRET1=${{ secrets.SECRET1 }} >> ./smart-contracts/.env
+            cat ./smart-contracts/.env
 
-      # Test Smart Contracts
-      - name: Hardhat Test Smart Contracts
-        run:
-          npm --prefix ./smart-contracts run test
-      
-      # Remove env file
-      - name: Remove Env File
-        run: |
-          rm ./smart-contracts/.env
+        # Test Smart Contracts
+        - name: Hardhat Test Smart Contracts
+          run:
+            npm --prefix ./smart-contracts run test
+        
+        # Remove env file
+        - name: Remove Env File
+          run: |
+            rm ./smart-contracts/.env
 
-      # Logs into Dockerhub
-      - name: docker hub login
-        env: 
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run:
-          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        # Logs into Dockerhub
+        - name: docker hub login
+          env: 
+            DOCKER_USER: ${{ secrets.DOCKER_USER }}
+            DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          run:
+            docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
       # Runs a set of commands using the runners shell
       - name: Docker build
