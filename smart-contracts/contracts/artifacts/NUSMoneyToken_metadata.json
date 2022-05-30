@@ -966,7 +966,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/NUSMoneyToken.sol": "NUSMoneyToken"
+			"smart-contracts/contracts/NUSMoneyToken.sol": "NUSMoneyToken"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -1148,12 +1148,12 @@
 				"dweb:/ipfs/QmZCMajhG7FtRYNDwBchXN89mXR6HLPVzr9732qfUdNf9E"
 			]
 		},
-		"contracts/NUSMoneyToken.sol": {
-			"keccak256": "0xe98f282525e9e7847487ec37cffbb267fd1e796b750abc7900dd2c7bc7dcfd6e",
+		"smart-contracts/contracts/NUSMoneyToken.sol": {
+			"keccak256": "0xf8be95d10d090a49b4a581c5580ae4baee23fd4c51cdc719498512e67bb40cc8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ecb4d196c9123f7793fd05d9dd461af2fea6e8bc00e2c38d47f4a842f4b52a33",
-				"dweb:/ipfs/QmQ9HjYZdKpqqCUyGAybs1owP2yQeqkXsBR6qG8VDo9RrX"
+				"bzz-raw://e0e8d6b278eb428c25f3a32ef86cc16613162ca3739e6ac43860d1e02ca6a323",
+				"dweb:/ipfs/QmTqTPmwBGRnZXg5YhNMiHjgTVXsG1Qa6B4msTiwWjYdne"
 			]
 		}
 	},

@@ -49,21 +49,6 @@ services:
     networks:
       chainnet:
         ipv4_address: 172.25.0.103 # The monitor needs to know this address
-
-  babykitties-frontend:
-    hostname: babykitties-frontend
-    depends_on:
-      - geth-dev-miner-2
-    build:
-      context: ./smart-contracts
-    container_name: babykitties-frontend
-    volumes:
-      - eth-data-3:/root/
-    ports:
-      - "80:80"
-    networks:
-      chainnet:
-        ipv4_address: 172.25.0.104 # The monitor needs to know this address
     
 networks:
   chainnet:
@@ -75,5 +60,3 @@ networks:
 volumes:
   eth-data-1:
   eth-data-2:
-  eth-data-3:
-

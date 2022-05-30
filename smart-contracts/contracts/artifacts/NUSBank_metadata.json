@@ -226,7 +226,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/NUSBank.sol": "NUSBank"
+			"smart-contracts/contracts/NUSBank.sol": "NUSBank"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -256,12 +256,12 @@
 				"dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN"
 			]
 		},
-		"contracts/NUSBank.sol": {
-			"keccak256": "0x98ccffcd95cd9510ec3c3a2f70f212dc8df98c368dbcb8a017a5d38e51365521",
+		"smart-contracts/contracts/NUSBank.sol": {
+			"keccak256": "0x024cd6414d374b4bfcc93b4922deee10dfa859aa6f78bbc853b4262386a3ad65",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0949e91fd169681a9e28c9f6994750d2f619c235949b8aa20a4f755270c85c5a",
-				"dweb:/ipfs/QmSXVPZARVjs1afKNv6eXmrL7nKRU88nauAUy458W5KQMU"
+				"bzz-raw://d896828de6269bb72ea88d13aadd762a75a44b5fe3d36432f5658dd97afdc16d",
+				"dweb:/ipfs/QmTzYJP8uzJ8hkkZpjaMnib44jy4Se7WBiHtwcahmxPgDo"
 			]
 		}
 	},

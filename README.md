@@ -54,6 +54,14 @@ You are now ready to launch your own Smart Contracts. Sample smart contracts, te
 
 Github workflow will trigger auto testing of smart contracts, dockerising frontend into Nginx web server and pushing to Dockerhub.
 
+If you want a simple frontend to test the Kittens Testnet, it is also provided
+
+Open a new terminal window, please enter this command:
+
+```
+docker run -d -p 80:80 piggyinu/babykittens-frontend
+```
+
 ## Killing Dockers
 
 Lastly, you can kill all containers by typing:

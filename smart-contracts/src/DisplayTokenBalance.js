@@ -6,8 +6,15 @@ import { formatEther } from "ethers/lib/utils";
 import { useWeb3React } from "@web3-react/core";
 import Button from "@mui/material/Button";
 
-export const TokenAddress = "0xa3FEE928EFc09c88ff31B01BD2c6f8b862A04aef";
-export const BankAddress = "0x3db5c93C420Cc868d9DAd12067A31b2c69285aD5";
+// docker token address: 0xCb76B1948F65132F2e52eD681FD26935c9E206F2
+// local token address: 0xa3FEE928EFc09c88ff31B01BD2c6f8b862A04aef
+// docker bank address: 0x8A366547C188412c93F2c5bdc776c8f0745545a7
+// local bank address: 0x32c2c15399aAD0deE331E2DD283a2cF4EA6CEAE0
+
+// max approval: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+export const TokenAddress = "0xCb76B1948F65132F2e52eD681FD26935c9E206F2";
+export const BankAddress = "0x32c2c15399aAD0deE331E2DD283a2cF4EA6CEAE0";
 
 const DEFAULT_NET = 987;
 const TokenAmount = "100";
