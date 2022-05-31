@@ -8,7 +8,7 @@ services:
       - 30310:30310/udp
     networks:
       chainnet:
-        ipv4_address: 172.25.0.101 # The miners need to know the IP address later on
+        ipv4_address: 172.25.0.101 # The miners need to know the IP address later on.
     
     
   geth-dev-miner-1:

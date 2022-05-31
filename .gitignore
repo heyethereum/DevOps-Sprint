@@ -1,6 +1,3 @@
 private-blockchain/.env
 node_modules
 
-private-blockchain/miner/node1
-private-blockchain/miner/node2
-private-blockchain/miner/node3
